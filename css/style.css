@@ -7,6 +7,7 @@ html,
 body {
   font: 14px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 section#header {
@@ -295,15 +296,17 @@ section#about {
 
 section#session {
   /* width: 100%; */
-  min-height: 3200px;
+  min-height: 2800px;
   background: #ffffff;
+ 
 }
 
 .sessionContainer {
   width: 95%;
-  min-height: 2350px;
+  min-height: 1950px;
   margin: 0 auto;
   padding-top: 150px;
+  margin-bottom: -300px;
 }
 .session-bg {
   height: 200px;
@@ -389,9 +392,10 @@ i {
 .masters {
   width: 100%;
   min-height: 700px;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   background: #ffffff;
   border-radius: 15px;
+  transform: translateY(300px);
   position: relative;
   z-index: 1;
 }
@@ -442,7 +446,7 @@ section#faq {
 }
 .faq-box {
   width: 100%;
-  height: 550px;
+  min-height: 550px;
 }
 .faq-bg {
   height: 150px;
@@ -562,7 +566,7 @@ section#faq {
 .gurrantee {
   padding-bottom: 10px;
   text-align: center;
-  line-height: 100px;
+  line-height: 50px;
   color: #8d8d8d;
   font-size: 14px;
 }
@@ -571,7 +575,7 @@ section#mailbag {
   width: 100%;
   height: 1300px;
   background: #ffffff;
-  padding-top: 500px;
+  padding-top: 100px;
 }
 
 .mail-bg {
@@ -829,7 +833,7 @@ section#footer {
 }
 
 .contact {
-  padding-top: 5px;
+  padding-top: 30px;
 }
 
 @media only screen and (max-width: 980px) {
@@ -926,10 +930,6 @@ section#footer {
     transform: rotate(-45deg) translate(35px, 35px);
   }
 
-  .container {
-    /* width: 100%; */
-  }
-
   .experience-container {
       width: 98%;
   }
@@ -940,6 +940,19 @@ section#footer {
 
   .objectives {
     line-height: 2;
+  }
+
+  section#session {
+    min-height: 3200px;
+   
+  }
+  
+  .sessionContainer {
+    min-height: 2350px;
+ 
+  }
+  section#faq {
+    padding-top: 200px;
   }
 
 }
@@ -1027,14 +1040,19 @@ section#footer {
         padding-left: 5px;
         font-size: 14px;
         font-weight: 300;
+        line-height: normal;
+        display: flex;
+        align-items: center;
       }
       
       .session-info {
         width: 78%;
         justify-content: space-evenly;
         padding-right: 0px;
-        margin-left: 5px;
+        margin-left: 0px;
+        font-size: 14px;
       }
+
 
       .session-detail {
         width: 100%;
@@ -1079,4 +1097,53 @@ section#footer {
       .course-package {
           display: block;
       }
+
+      section#faq {
+        padding-top: 400px;
+      }
+      
+      .mailbag-content {
+        display: block;
+       
+      }
+
+      .mail-icon{
+          display: none;
+      }
+
+      .projects-container {
+          display: block;
+      }
+
+      .projects-direction {
+        height: 150px;
+        width: 100%;
+        background-size: 300px;
+        background-position: bottom;
+      }
+
+      .dash {
+          width: 100px;
+      }
+
+      .dates {
+        margin: 10px;
+      }
+
+      .start-date,
+.end-date {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.days-left {
+    width: 90%;
+}
+
+.days-full {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
 }
