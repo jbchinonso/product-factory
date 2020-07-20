@@ -101,9 +101,10 @@ section#header {
 
 .design-image {
   width: 45%;
-  height: 420px;
+  max-height: 420px;
   background: url("../images/product-design.svg") no-repeat;
-  background-size: 390px;
+  background-size: 90%;
+  background-position: center;
   padding-top: 10px;
 }
 
@@ -171,8 +172,9 @@ section#about {
 
 .logo-about {
   height: 300px;
+  width: auto;
   background: url("../images/about.svg") no-repeat;
-  background-size: 470px;
+  background-size: 100%;
   transform: translateY(-130px);
   grid-area: logo-about;
 }
@@ -858,6 +860,7 @@ section#schedule {
   border-radius: 15px;
   font-size: 30px;
   font-weight: 600;
+  letter-spacing: 15px;
 }
 
 .start-date .p{
@@ -920,6 +923,7 @@ section#footer {
 .footer-logo {
   width: 150px;
   height: 80px;
+  margin: 0 auto;
 }
 
 .footer-logo img {
@@ -1049,6 +1053,14 @@ section#footer {
   section#faq {
     padding-top: 200px;
   }
+
+  .start-date,
+.end-date {
+  padding: 25px;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 8px;
+}
 
 }
 
@@ -1240,6 +1252,7 @@ section#footer {
   padding: 10px;
   font-size: 20px;
   font-weight: 400;
+  letter-spacing: 5px;
 }
 
 .days-left {
@@ -1249,6 +1262,10 @@ section#footer {
 .days-full {
     font-size: 20px;
     font-weight: 500;
+  }
+
+  .footer-container {
+    flex-direction: column;
   }
 
 }
