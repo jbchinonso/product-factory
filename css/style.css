@@ -204,7 +204,7 @@ section#about {
   margin-top: 30px;
 }
 .about-text {
-  height: 200px;
+  min-height: 200px;
   grid-area: about-text;
   transform: translateY(-100px);
   line-height: 2.5;
@@ -260,6 +260,7 @@ section#about {
   line-height: 40px;
   border: solid 1px #8d8d8d;
   width: 33.33%;
+  overflow: hidden;
 }
 .title-right {
   background-color: #111111;
@@ -351,6 +352,13 @@ section#session {
   margin-left: 20px;
 }
 
+.duration, .date, .view{
+  line-height: normal;
+  display: flex;
+  align-items: center;
+
+}
+
 .session-detail {
   width: 100%;
   min-height: 180px;
@@ -421,11 +429,91 @@ i {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.master{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.master .overlay{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  background: rgba(54, 54, 54, 0.75);
+  border-radius: 15px;
+  visibility: hidden;
+  transition: all .3s ease;
+}
+
+.social-media{
+  padding: 20px;
+}
+
+.social-media i{
+  color: #ffffff;
+  padding: 5px;
+}
+
+.about-master{
+  width: 80%;
+  height: 35px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background: rgba(165, 164, 163, 0.5);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.lines{
+  width: 20px;
+  height: 1.5px;
+  border-radius: 5px;
+  background: #ffffff;
+  position: relative;
+  display: flex;
+  align-self: center;
+}
+
+.lines::before, .lines::after{
+  content: "";
+  height: 1px;
+  border-radius: 5px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.lines::before{
+  width: 12px;
+  transform: translateY(-5px);
+}
+
+.lines::after{
+  width: 15px;
+  transform: translateY(5px);
+}
+
+.link{
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-self: center;
+}
 
 .master img {
   width: 150px;
   height: 150px;
 }
+
+.master:hover .overlay{
+  visibility: visible;
+}
+
 p {
   text-align: justify;
   margin-left: 20px;
@@ -573,14 +661,14 @@ section#faq {
 
 section#mailbag {
   width: 100%;
-  height: 1300px;
+  min-height: 1300px;
   background: #ffffff;
   padding-top: 100px;
 }
 
 .mail-bg {
   width: 100%;
-  height: 450px;
+  min-height: 450px;
   background: #111111;
 }
 
@@ -669,8 +757,9 @@ section#mailbag {
 }
 
 .projects-description {
-  width: 500px;
+  max-width: 500px;
   text-align: justify;
+  padding: 5px;
 }
 
 .projects-description h2 {
@@ -701,6 +790,8 @@ section#mailbag {
 
 .space {
   height: 50px;
+  width: 99%;
+  margin: 0 auto;
 }
 
 section#schedule {
@@ -710,11 +801,11 @@ section#schedule {
 }
 
 .schedule-bg {
-  width: 400px;
+  max-width: 400px;
   height: 50px;
   margin: 0 auto;
   background: url("../images/schedule-bg.svg") no-repeat;
-  background-size: 400px;
+  background-size: 100%;
   background-position: center;
   padding-top: 100px;
 }
@@ -767,6 +858,10 @@ section#schedule {
   border-radius: 15px;
   font-size: 30px;
   font-weight: 600;
+}
+
+.start-date .p{
+  visibility: hidden;
 }
 
 .days-left {
@@ -1064,6 +1159,11 @@ section#footer {
         margin-right: 5px;
       }
       
+      .session-info i{
+        margin-right: 0px;
+        visibility: hidden;
+      }
+
       .session-detail-inner {
         display: block;
       }
@@ -1105,6 +1205,11 @@ section#footer {
       .mailbag-content {
         display: block;
        
+      }
+
+      .subscribe{
+        margin: 0 auto;
+        width: 95%;
       }
 
       .mail-icon{

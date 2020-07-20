@@ -9,14 +9,14 @@ hamburgerContainer.addEventListener('click',(e)=>{
     hamburgerContainer.classList.toggle('open');
 })
 
-var docwidth = document.documentElement.offsetWidth;
 
-[].forEach.call(
+const masters = document.querySelectorAll('.master img');
+const overlay = document.querySelector('.overlay')
+console.log(masters);
 
-    document.querySelectorAll('*'),
-    function(el){
-        if(el.offsetWidth > docwidth){
-            console.log(el);
-        }
-    }
-);
+// masters.forEach(element => {
+//     element.addEventListener('mouseover',(e)=>{
+//         this.overlay.style.visibility = 'visible';
+//         console.log('yeah')
+//     })
+// })
