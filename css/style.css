@@ -500,7 +500,7 @@ i {
   transform: translateY(5px);
 }
 
-.link{
+.pro-link{
   font-size: 12px;
   font-weight: 600;
   display: flex;
@@ -740,11 +740,11 @@ section#mailbag {
   margin-top: 100px;
 }
 .project-heading {
-  width: 300px;
+  max-width: 300px;
   height: 80px;
   margin: 0 auto 50px auto;
   background: url("../images/projects.svg") no-repeat;
-  background-size: 300px;
+  background-size: 100%;
   background-position: center;
 }
 
@@ -1252,7 +1252,7 @@ section#footer {
   padding: 10px;
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .days-left {
